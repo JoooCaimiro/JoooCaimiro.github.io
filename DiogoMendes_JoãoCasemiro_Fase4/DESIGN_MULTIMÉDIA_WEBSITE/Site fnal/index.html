@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HOME | DM</title>
+    <link rel="shortcut icon" type="image/png" href="Codigo/Material/Icons/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Codigo/Estilos/Estilos_Home.css">
+  
+
+
+</head>
+<body>
+ <!--HAMBURGUER STYLE-->    
+ <div class="nav">
+     <a href="index.html"><img src="Codigo/Material/Icons/SiteLogo.png" alt=""  ></a>
+     <button onclick="troca()">MODO ALUNO<img src="Codigo/Material/Icons/icons-off.png" alt="" id="modoaluno"></button>
+  <label for="toggle">&#9776;</label>
+  <input type="checkbox" id="toggle"/>
+  
+  <div class="menu">
+      <a href="Codigo\Estilos_Noticias.html">NOTÍCIAS <img src="Codigo\Material\Icons\icons-not.png" alt=""></a>
+      <a href="Codigo\Estilos_Agenda.html">AGENDA <img src="Codigo\Material\Icons\icons-age.png" alt=""></a>
+      <a href="Codigo\Estilos_Docentes.html">INFO DO CURSO <img src="Codigo\Material\icons\icons-inf.png" alt=""></a>
+      <a href="Codigo\Estilos_Esad_experience.html">ESAD EXPERIENCE <img src="Codigo\Material\icons\icons-esa.png" alt=""></a>
+      <a href="Codigo\Estilos_Docentes.html">DOCENTES <img src="Codigo\Material\Icons\icons-doc.png" alt=""></a>
+      <a href="Codigo\Estilos_horarios.html">HORÁRIOS <img src="Codigo\Material\Icons\icons-hor.png" alt=""></a>
+      <a href="Codigo\Estilos_mapa.html">MAPAS <img src="Codigo\Material\Icons\icons-map.png" alt=""></a>
+  </div>
+</div>
+<section>
+<div id="scroll" class="scroll"
+<a href="#" class="scroll-down" address="true"></a>
+
+    <img src="Codigo\Material\Icons\icons-mai.png" alt="">
+    <img src="Codigo\Material\Icons\icons-men.png" alt=""></div>
+</section>
+<section class="ok">
+
+ <!--HAMBURGUER END-->
+<div id="box" class="box">
+    <div id="textbox" class="textbox"><h1>CURSO DE DESIGN MULTIMÉDIA</h1> Bem vindo! Alterna entre aluno e não aluno com a nossa feature "MODO ALUNO" na barra de navegação.</div>
+<div id="d2" class="vertical-menu-on">
+    <img src="Codigo\Material\Icons\icons-map.png" alt="">
+    <a href="Codigo/Estilos_mapa.html">MAPA</a>
+    <img src="Codigo\Material\Icons\icons-hor.png" alt="">
+    <a href="Codigo/Estilos_horarios.html">HORÁRIOS</a>
+    <img src="Codigo\Material\Icons\icons-age.png" alt="">
+    <a href="Codigo\Estilos_Agenda.html">AGENDA</a>
+    <img src="Codigo\Material\Icons\icons-not.png" alt="">
+    <a href="Codigo/Estilos_noticias.html">NOTÍCIAS</a>
+   
+  </div>
+  <div id="d1" class="vertical-menu-off">
+    <a href="#" class="active"></a>
+    <img src="Codigo\Material\icons\icons-inf.png" alt="">
+    <a href="Codigo/Estilos_Docentes.html">INFO</a>
+    <img src="Codigo\Material\icons\icons-esa.png" alt="">
+    <a href="Codigo/Estilos_Esad_experience.html">EXPERIENCE</a>
+    <img src="Codigo\Material\icons\icons-con.png" alt="">
+    <a href="Codigo/Estilos_Docentes.html">ACESSO</a>
+    <img src="Codigo\Material\Icons\icons-not.png" alt="">
+    <a href="Codigo/Estilos_noticias.html">NOTÍCIAS</a>
+  </div>
+</div>
+
+<script>
+let quemEstaVisivel = 'd1' ;
+
+function troca(){
+    console.log('troca');
+    let div1 = document.getElementById('d1') ;
+    let div2 = document.getElementById('d2') ;
+
+    if (quemEstaVisivel == 'd1'){
+        div1.classList.add('vertical-menu-on');
+        div1.classList.remove('vertical-menu-off');
+
+        div2.classList.add('vertical-menu-off');
+        div2.classList.remove('vertical-menu-on');
+
+        quemEstaVisivel = 'd2';
+    } else if (quemEstaVisivel == 'd2'){
+        div1.classList.add('vertical-menu-off');
+        div1.classList.remove('vertical-menu-on');
+
+        div2.classList.add('vertical-menu-on');
+        div2.classList.remove('vertical-menu-off');
+
+        quemEstaVisivel = 'd1';
+    }
+}
+$(function() {
+    $('.scroll-down').click (function() {
+      $('html, body').animate({scrollTop: $('section.ok').offset().top }, 'slow');
+      return false;
+    });
+  });
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HOME</title>
+    <style>
+		div {
+			font-size: 150%;
+			font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+			width: 30vw;
+			height: 20vh;
+			background: lemonchiffon;
+			border: 1px solid;
+			margin: 3vh auto;
+		
+		}
+		
+		div.visivel {
+			display: block;
+		}
+		div.escondida {
+			display: none;
+			
+		}
+
+	</style>
+</head>
+<body>
+	<h1>http://172.22.138.147:8080/</h1>
+	<button onclick="troca()">Toogle</button>
+	<div id="d1" class='visivel'>Div 1</div>
+	<div id="d2" class='escondida'>Div 2</div>
+
+	<script>
+		let quemEstaVisivel = 'd1';
+
+		function troca(){
+			console.log('troca');
+			let div1 = document.getElementById('d1');
+			let div2 = document.getElementById('d2');
+
+			if (quemEstaVisivel == 'd1'){
+				div1.classList.add('escondida');
+				div1.classList.remove('visivel');
+
+				div2.classList.add('visivel');
+				div2.classList.remove('escondida');
+
+				quemEstaVisivel = 'd2';
+			} else if (quemEstaVisivel == 'd2'){
+				div1.classList.add('visivel');
+				div1.classList.remove('escondida');
+
+				div2.classList.add('escondida');
+				div2.classList.remove('visivel');
+
+				quemEstaVisivel = 'd1';
+			}
+
+		}
+
+
+	</script>
+</body>
+</html>

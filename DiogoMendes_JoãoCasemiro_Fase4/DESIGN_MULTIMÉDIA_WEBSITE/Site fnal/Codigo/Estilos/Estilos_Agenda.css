@@ -1,0 +1,365 @@
+
+.nav {
+  width: 100%;
+  text-align: right;
+  float: right;
+  line-height: 70px;
+  background-color: #a33327;
+
+  text-align: right;
+    height: 70px;
+    line-height: 60px;
+    background-color: #a33327;
+    font-weight: 900;
+    font-size: 1.1em;
+  vertical-align: center;
+  
+  
+}
+
+.nav > a > img{
+  width: 10rem;
+  float: left;
+  padding-left: 1vw;
+  padding-top: 1vw;
+  vertical-align: middle;
+  overflow: hidden;
+
+}
+
+#toggle {
+  display: none;}
+
+.nav > button {
+background-color: transparent;
+border: none;
+font-weight: 900;
+  font-size: 1.1rem;
+}
+
+.nav > button > img{
+  padding-right:20px ;
+  width: 50px;
+  padding-bottom: 7px;
+  background-color: transparent;
+  vertical-align: middle;}
+  
+  @media screen and (max-width: 450px) {
+    .nav > button {
+        font-size: 0px;
+      }
+      .nav{
+        line-height: 40px;
+      }
+      
+}
+
+
+
+  label {
+      display: block;
+      cursor: pointer;
+      margin: 0 26px 0 0;
+      font-size: 45px;
+   color: white;
+      line-height: 70px;
+      width: 40px;
+      float: right;
+      font-weight: 900;
+  }
+  .menu {
+    text-align: right;
+    width: 100%;
+    display: none;
+    margin: 0 30px 0 0;
+    
+    
+  }
+  .menu a {
+    margin: 0;
+    clear: right;
+    text-decoration: none;
+    color: white;
+    font-weight:900;
+  padding: 0px 28px;
+  font-size: 1rem;
+  background-color: #a33327;
+  text-align: right;
+  float: right;
+display: block;
+width: 250px;
+z-index: 2;
+
+}
+
+.menu a img{
+  height: 2.2rem;
+  align-self: center;
+  vertical-align: middle;
+} 
+
+
+  #toggle:checked + .menu {
+      display: block;
+  }
+  
+
+  @media screen and (max-width: 450px) {
+   .menu a{
+    width: 175px;
+    font-size: .8rem;
+  
+  }}
+
+/*NAV END*/
+
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  
+    background-color: #151515;
+  
+
+  
+}
+
+h1 {
+  padding-left: 30px;
+  color: #eee;
+  opacity: 100%;
+}
+h2 {
+ font-size: 30PX;
+  color: #eee;
+  opacity: 100%;
+}
+p {
+  color: #eee;
+  padding-left: 30px;
+  opacity: 100%;
+}
+
+/*////////*****************************/
+/*////////*****************************/
+
+.Calendar_geral {
+  width: 90%;
+  margin-left: 1vw;
+}
+
+
+ul {list-style-type: none;}
+
+
+.month {
+  width: 100%;
+  background: #1f1f1f;
+  text-align: center;
+  border-radius: 15px;
+  margin-top: 2vw;  
+  font-weight: 900;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: -10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: -10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #151515 ;
+  font-size: 20px;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 5%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #151515;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 10%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:35px;
+  color: white;
+}
+
+.days li .active {
+  padding: 1,9px;
+  background: #a33327;
+  color: white !important;
+  border-radius: 10px;
+}
+
+.colornub {
+  color: #777;
+}
+
+/*////////*****************************/
+/*////////*****************************/
+
+.Pequeno_imagem {
+  background-color: red;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  
+  text-align: center;
+  font-size: 50px;
+  opacity: 40%;
+  object-fit: contain;
+  font-weight: 900;
+}
+
+.dia15 {
+
+  width: 250px;
+  height: 210px;
+  margin-top: 0,5vw;
+  padding: 1;
+}
+.dia17 {
+
+  width: 250px;
+  height: 210px;
+  margin-top: 0,5vw;
+  padding: 1;
+}
+
+.dia15 > img{
+  width: 100%; /* or any custom size */
+    height: 100%; 
+    object-fit: contain;
+}
+.dia17 > img{
+  width: 100%; /* or any custom size */
+    height: 100%; 
+    object-fit: contain;
+}
+
+
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 45%;
+  padding: 10px;
+  height: 650px; /* Should be removed. Only for demonstration */
+  background-color: transparent;
+}
+
+.column2 {
+  float: left;
+  width: 45%;
+  padding: 10px;
+  height: 650px; /* Should be removed. Only for demonstration */
+  background-color: transparent;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/*////////*****************************/
+/*////////*****************************/
+
+/******************************/
+/******************************/
+
+/*////////*****************************/
+/*////////*****************************/
+
+/* Add media queries for smaller screens */
+@media screen and (max-width: 950px) {
+  .column {width:100%;}
+
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
+  .Calendar_geral {width: 80%;}
+  .month {width: 70%;}
+  .days {width: 90%;}
+  .days li {font-size: 20px;}
+  .month ul li {font-size: 20px;}
+  .column  {width: 100%;
+  height: 450px;}
+  
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+  h1 {
+    padding-left: 0px;
+    
+  }
+  
+  p {
+    padding-left: 0px;
+    
+  }
+}
+  
+
+
+@media screen and (max-width: 290px) {
+  .weekdays li , .days li {
+    width: 12.2%;
+  }
+}}
+
+
+.scroll{
+  font-size: 100%;
+    width: 70px;
+    height: 80px;
+    background:  #151515; 
+    border-radius: 50px;
+    top: 250px;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    opacity:100%  ;
+  margin: auto;
+ text-decoration: none;
+padding-top: 10px;
+float: right;
+z-index: -2;
+
+}
+
+.scroll img {
+  height: 35px;
+}
